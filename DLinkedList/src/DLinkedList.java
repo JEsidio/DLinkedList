@@ -53,7 +53,7 @@ public class DLinkedList<T> {
 	}
 	
 	/**
-	* Verifica se a lista contém o valor
+	* Verifica se a lista contÃ©m o valor
 	**/
 	public boolean contains(T value) {
 		Node<T> temp = head;
@@ -75,7 +75,7 @@ public class DLinkedList<T> {
 	}
 	
 	/**
-	* Retorna o último elemento da lista.
+	* Retorna o Ãºltimo elemento da lista.
 	**/
 	public T getLast() {
 		if(isEmpty()) throw new NoSuchElementException("List is empty");
@@ -83,7 +83,7 @@ public class DLinkedList<T> {
 	}
 	
 	/**
-	 * Verifica se a lista está vazia.
+	 * Verifica se a lista estÃ¡ vazia.
 	 **/
 	public boolean isEmpty() {
 		return size == 0;
@@ -101,7 +101,7 @@ public class DLinkedList<T> {
 	}
 	
 	/**
-	* Remove e retorna o último elemento da lista
+	* Remove e retorna o Ãºltimo elemento da lista
 	**/
 	public T removeLast() {
 		if(isEmpty()) throw new NoSuchElementException("List is empty");
@@ -141,7 +141,7 @@ public class DLinkedList<T> {
 	}
 	
 	/**
-	 * Retorna o elemento da posição index
+	 * Retorna o elemento da posiÃ§Ã£o index
 	**/
 	public T get(int index) {
 		if(index >= size || index < 0) throw new IndexOutOfBoundsException("index "+index);
@@ -153,7 +153,7 @@ public class DLinkedList<T> {
 	}	
 	
 	/**
-	 * Remove o elemento da posição index e remove da lista
+	 * Remove o elemento da posiÃ§Ã£o index e remove da lista
 	 **/
 	public T remove(int index) {
 		if(index >= size  || index < 0) throw new IndexOutOfBoundsException("index "+index);
@@ -176,7 +176,7 @@ public class DLinkedList<T> {
 	}
 	
 	/**
-	 * Adiciona um novo elemento na posição index
+	 * Adiciona um novo elemento na posiÃ§Ã£o index
 	 **/
 	public void add(int index, T value) {
 		if(index > size || index < 0) throw new IndexOutOfBoundsException("index "+index);
@@ -194,7 +194,7 @@ public class DLinkedList<T> {
 			head = newNode;
 		}else {	
 			before.setNext(newNode);
-			if(temp == tail) {
+			if(index == size) {
 				tail = newNode;
 			}
 		}
@@ -202,7 +202,7 @@ public class DLinkedList<T> {
 	}
 	
 	/**
-	 * Atualiza o elemento da posição index
+	 * Atualiza o elemento da posiÃ§Ã£o index
 	 **/
 	public void set(int index, T value) {
 		if(index >= size || index < 0) throw new IndexOutOfBoundsException("index "+index);
